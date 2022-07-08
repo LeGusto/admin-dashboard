@@ -1,0 +1,412 @@
+:root {
+    --top-height: 1rem;
+    --bottom-height: 6vw;
+    --light-gray: rgb(231, 228, 228);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 2ch;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+@font-face {
+    font-family: 'formal';
+    src: url('fonts/Gulzar-Regular.woff2') format('woff2'),
+         url('fonts/Gulzar-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  html {
+    
+  }
+
+body {
+    display: table;
+    /*min-height: 100%;
+    min-width: 100%;*/
+    margin: 0;
+    padding:0;
+    font-size: calc(12px + 1vw);
+    font-family: 'formal','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    /*min-width: 100%;
+    min-height: 100%;*/
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    text-align: center;
+    
+}
+
+.side {
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: rgb(67, 130, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 50px
+}
+
+.side-buttons {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+h1 {
+    color: white;
+    font-weight: 500;
+    text-align: left;
+}
+
+.side img {
+    width: 20px;
+    height: 20px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.side .option {
+    display: flex;
+    color: white;
+    font-weight: 100;
+}
+
+.option button img {
+    filter: invert(1);
+}
+
+.option button {
+    background-color: inherit;
+    border: none;
+    color: white;
+    font-size: 2vw;
+    
+}
+
+.main {
+    background-color: white;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.content {
+    background-color: var(--light-gray);
+    grid-area: 2 / 2 / 3 / 2;
+    display: grid;
+    
+    grid-template-columns: 4fr 1fr;
+    --pad-marg: 1rem;
+    padding:1rem
+}
+
+.projects {
+    grid-area: 1 / 1 / 14/ 2;
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.announcements {
+    grid-area: 1 / 2 / 7 / -1;
+    background-color:var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding-top: 1rem;
+    
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    padding:var(--pad-marg);
+    overflow: hidden;
+    flex:1;
+    
+}
+
+.announcements .card2 {
+    width: 100%;
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card2 .text {
+    font-size: 0.7rem;
+  display: flex;
+  align-content: center;
+  justify-content:center;
+  text-align: left;
+  line-height: 2ch;
+  flex:3;
+  text-align: center;
+}
+
+.card2 h3 {
+    flex: 1;
+    padding:0;
+    margin:0;
+    line-height: 2ch;
+    font-size: 0.8rem;
+   
+   
+}
+
+.border {
+    height: 5px;
+    background-color: gray;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: var(--pad-marg);
+    margin-bottom: var(--pad-marg);
+}
+
+.trending {
+    grid-area: 7 / 2 / 14 / -1;
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.cards3 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: var(--pad-marg);
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    flex:1;
+    
+}
+
+
+.card3 img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.card3 {
+    display: flex;
+    flex:1
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border-left: 5px solid rgb(255, 208, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    justify-content: space-between;
+    overflow: hidden;
+    grid-template-rows: 1fr 4fr 1fr;
+    flex:1;
+    
+}
+
+h2 {
+    font-weight: 100;
+    text-align: center;
+    height: 3rem;
+    
+}
+
+
+.card div {
+    max-width: 100%;
+}
+
+.card .text {
+    grid-area: 2 / 1 / 3 / 1;
+    font-size: 1rem;
+  display: flex;
+  align-content: center;
+  justify-content:center;
+  text-align: left;
+  line-height: 2ch;
+  
+
+  
+}
+
+.card h3 {
+    display:inline-flex;
+    align-items: flex-end;
+    font-size: 1.2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(75px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex:1;
+    
+    
+   
+}
+
+.projects h2 {
+    box-sizing: border-box;
+ margin-left:20px;
+ height: 3rem;
+}
+
+
+.choices {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.projects img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.user {
+    
+    flex: 2;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    
+    gap: 0.5rem;
+}
+
+.user .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.projects h2 {
+    text-align: left;
+}
+
+.search {
+    flex: 4;
+    display: flex;
+    gap:20px;
+    padding-right: 20px;
+    height:50%;
+    align-self: flex-end;
+}
+
+.searching {
+    
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border: 0;
+    background-color: inherit;
+    
+}
+
+input[type="search"] {
+    flex:1;
+    border-radius: 10px;
+    border: 0;
+    background-color: var(--light-gray);
+    max-height: 50px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    
+    
+}
+
+.top img {
+    height: var(--top-height);
+    width: var(--top-height);
+}
+
+
+
+
+.bottom img {
+    height: var(--bottom-height);
+    width: var(--bottom-height);
+}
+
+.bottom {
+    display: flex;
+    padding: 20px;
+    gap:20px
+
+}
+
+.welcome {
+    flex:5;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+    height: 6vw;
+    line-height: 2ch;
+}
+
+.bottom .buttons * {
+    background-color: rgb(101, 181, 247);
+    color:white;
+    border: 0;
+    border-radius: 10px;
+    width: calc(30px + 7vw);
+    height: calc(20px + 2vh);
+    font-weight: 700;
+    font-size: 1rem;
+
+}
+
+.buttons {
+    display: flex;
+    
+    gap: 2vw;
+    align-items: flex-end;
+}
+
+
+
+
